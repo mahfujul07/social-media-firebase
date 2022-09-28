@@ -55,9 +55,11 @@ const Header = () => {
         <div className="flex items-center justify-end space-x-4">
           <Link href="/login">
           <Image
-            className="h-10 w-10 rounded-full cursor-pointer"
+            className="rounded-full cursor-pointer"
             src="https://avatars.githubusercontent.com/u/85120196?s=400&u=a2722e9a12be7313ea5195dfabe7589dd8a8e04f&v=4"
             alt="profile_picture"
+            width={40}
+            height={40}
           />
           </Link>
           <p className="font-semibold pr-3 whitespace-nowrap">Mahfuz</p>
