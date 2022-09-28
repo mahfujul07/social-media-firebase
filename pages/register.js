@@ -31,7 +31,12 @@ const Register = () => {
   return (
     <div className="auth-bg flex items-center justify-center h-screen">
       <div className="flex flex-col items-center justify-center w-96 bg-white p-5 rounded-md shadow-md">
-        <Image src="/logo.png" width={200} height={200} objectFit="contain" />
+        <Image 
+        src="/logo.png" 
+        alt="logo"
+        width={200} 
+        height={200} 
+        objectFit="contain" />
         <form className="flex flex-col items-center justify-center w-full mt-5">
           <input
             type="text"

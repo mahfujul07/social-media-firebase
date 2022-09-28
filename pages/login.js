@@ -29,6 +29,7 @@ const Login = () => {
       <div className="flex flex-col items-center justify-center w-96 bg-white p-5 rounded-md shadow-md">
         <Image
           src="/logo.png"
+          alt="logo"
           width={200}
           height={200}
           objectFit="contain"
