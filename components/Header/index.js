@@ -2,6 +2,7 @@ import React from "react";
 import { FaHome, FaBell } from "react-icons/fa";
 import { BsPeopleFill, BsFillChatTextFill } from "react-icons/bs";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   return (
