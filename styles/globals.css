@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.auth-bg {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 9s ease infinite;
+    height: 100vh;
+    -webkit-animation: gradient 9s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.submit {
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+
+.submit:hover {
+    background-position: right center;
+}
