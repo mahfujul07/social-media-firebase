@@ -8,6 +8,8 @@ const nextConfig = {
       "avatars.githubusercontent.com",
       "i.pinimg.com",
       "cdn5.vectorstock.com",
+      "yt3.ggpht.com",
+      "picsum.photos",
     ],
   },
 };

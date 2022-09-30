@@ -1,7 +1,9 @@
 import React from 'react'
 
-const Dashboard = () => {
-  return <div>This route is protected</div>
+const profile = () => {
+  return (
+    <div>profile</div>
+  )
 }
 
-export default Dashboard
+export default profile
