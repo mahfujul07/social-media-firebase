@@ -14,7 +14,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
-  
+
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useEffect } from "react";
@@ -61,17 +61,17 @@ const Login = () => {
   };
 
   // sign in with github
-  const GithubProvider = new GithubAuthProvider();
-  const GithubLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, GithubProvider);
-      console.log(result.user);
-      router.push("/dashboard");
-    } catch (error) {
-      console.log(error);
-      <h1 className="">Error while signIn</h1>;
-    }
-  };
+  // const GithubProvider = new GithubAuthProvider();
+  // const GithubLogin = async () => {
+  //   try {
+  //     const result = await signInWithPopup(auth, GithubProvider);
+  //     console.log(result.user);
+  //     router.push("/dashboard");
+  //   } catch (error) {
+  //     console.log(error);
+  //     <h1 className="">Error while signIn</h1>;
+  //   }
+  // };
 
   return (
     <div className="auth-bg flex items-center justify-center h-screen">
