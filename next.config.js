@@ -10,6 +10,9 @@ const nextConfig = {
       "cdn5.vectorstock.com",
       "yt3.ggpht.com",
       "picsum.photos",
+      "firebasestorage.googleapis.com",
+      "lh3.googleusercontent.com",
+      "www.google.com",
     ],
   },
 };

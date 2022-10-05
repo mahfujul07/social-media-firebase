@@ -1,29 +1,17 @@
-// firebase 8.8.0 setup for nextjs
-//
-
-import firebase from 'firebase/app';
-import 'firebase/auth';
-import 'firebase/firestore';
-import 'firebase/storage';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCdLCq9caaM-E8OPCAUDrjYwpEp0B-PIXs",
-  authDomain: "social-media-firebase-mahfuz.firebaseapp.com",
-  databaseURL:
-    "https://social-media-firebase-mahfuz-default-rtdb.firebaseio.com",
-  projectId: "social-media-firebase-mahfuz",
-  storageBucket: "social-media-firebase-mahfuz.appspot.com",
-  messagingSenderId: "985012894596",
-  appId: "1:985012894596:web:ded4e0ecc00f8f836dfbd1",
-  measurementId: "G-C6S7TV9YHV",
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  databaseURL: process.env.NEXT_PUBLIC_DATABASE_URL,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID,
 };
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-}
-
-const db = firebase.firestore();
-const auth = firebase.auth();
-const storage = firebase.storage();
-
-export { db, auth, storage };
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth();

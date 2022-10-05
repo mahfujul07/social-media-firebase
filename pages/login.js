@@ -3,13 +3,34 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { BsGithub, BsTwitter, BsFacebook, BsFillShieldFill } from "react-icons/bs";
+import {
+  BsGithub,
+  BsTwitter,
+  BsFacebook,
+  BsFillShieldFill,
+} from "react-icons/bs";
 import Link from "next/link";
+import {
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "firebase/auth";
+import { auth } from "../utils/firebase";
+import { useEffect } from "react";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const [user, loading] = useAuthState(auth);
+
+  useEffect(() => {
+    if (user) {
+      router.push("/dashboard");
+    } else {
+      router.push("/login");
+    }
+  }, [user]);
 
   const login = (e) => {
     e.preventDefault();
@@ -19,9 +40,22 @@ const Login = () => {
       password,
     }).then((res) => {
       if (res.ok) {
-        router.push("/");
+        router.push("/dashboard");
       }
     });
+  };
+
+  // sign in with google
+  const GoogleProvider = new GoogleAuthProvider();
+  const GoogleLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, GoogleProvider);
+      console.log(result.user);
+      router.push("/dashboard");
+    } catch (error) {
+      console.log(error);
+      <h1 className="">Error while signIn</h1>;
+    }
   };
 
   return (
@@ -67,9 +101,9 @@ const Login = () => {
           </Link>
         </p>
         <p className="mt-3">Or continue with these social profile</p>
-        <div className="flex items-center justify-center gap-5 mt-3">
-          <FcGoogle className="w-6 h-6" />
-          <BsGithub className="w-6 h-6" />
+        <div className="flex items-center justify-center gap-5 mt-3 cursor-pointer">
+          <FcGoogle onClick={GoogleLogin} className="w-6 h-6" />
+          <BsGithub onClick={GithubLogin} className="w-6 h-6" />
           <BsTwitter className="w-6 h-6 text-blue-400" />
           <BsFacebook className="w-6 h-6 text-blue-600" />
         </div>
@@ -79,4 +113,3 @@ const Login = () => {
 };
 
 export default Login;
-
