@@ -19,7 +19,7 @@ const ContentPost = () => {
           <input
             type="text"
             className="w-[29pc] ml-[10px] mt-[5px] h-[25px] border-none outline-none"
-            placeholder="Whats on your mind, Mahfuz?"
+            placeholder="Whats on your mind?"
           />
         </div>
         <div >

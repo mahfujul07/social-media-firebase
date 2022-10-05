@@ -13,6 +13,8 @@ import Link from "next/link";
 import {
   GoogleAuthProvider,
   signInWithPopup,
+  GithubAuthProvider,
+  
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useEffect } from "react";
@@ -50,6 +52,19 @@ const Login = () => {
   const GoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, GoogleProvider);
+      console.log(result.user);
+      router.push("/dashboard");
+    } catch (error) {
+      console.log(error);
+      <h1 className="">Error while signIn</h1>;
+    }
+  };
+
+  // sign in with github
+  const GithubProvider = new GithubAuthProvider();
+  const GithubLogin = async () => {
+    try {
+      const result = await signInWithPopup(auth, GithubProvider);
       console.log(result.user);
       router.push("/dashboard");
     } catch (error) {
