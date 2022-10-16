@@ -28,7 +28,7 @@ const Header = () => {
             <div className="flex items-center justify-center space-x-2 cursor-pointer">
               <Link href="/">
                 <a>
-                  <FaHome className="w-6 h-6" />
+                  <FaHome className="w-6 h-6 ml-2 text-purple-700" />
                   Home
                 </a>
               </Link>
@@ -36,7 +36,7 @@ const Header = () => {
             <div className="flex items-center space-x-2 cursor-pointer">
               <Link href="/network">
                 <a>
-                  <BsPeopleFill className="w-6 h-6" />
+                  <BsPeopleFill className="w-6 h-6 ml-8 text-purple-700" />
                   My Network
                 </a>
               </Link>
@@ -44,7 +44,7 @@ const Header = () => {
             <div className="flex items-center space-x-2 cursor-pointer">
               <Link href="/message">
                 <a>
-                  <BsFillChatTextFill className="w-6 h-6" />
+                  <BsFillChatTextFill className="w-6 h-6 ml-6 text-purple-700" />
                   Messaging
                 </a>
               </Link>
@@ -52,7 +52,7 @@ const Header = () => {
             <div className="flex items-center space-x-2 cursor-pointer">
               <Link href="/notifications">
                 <a>
-                  <FaBell className="w-6 h-6" />
+                  <FaBell className="w-6 h-6 ml-7 text-purple-700" />
                   Notifications
                 </a>
               </Link>
@@ -75,14 +75,14 @@ const Header = () => {
               <Image
                 onClick={() => auth.signOut()}
                 className="rounded-full cursor-pointer"
-                src={user.photoURL}
+                src={user?.photoURL}
                 alt="profile_picture"
                 width={40}
                 height={40}
               />
             </Link>
             <p className="font-semibold pr-3 whitespace-nowrap">
-              {user.displayName}{" "}
+              {user?.displayName}{" "}
             </p>
 
             {/* <button

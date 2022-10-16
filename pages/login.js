@@ -3,18 +3,12 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import {
-  BsGithub,
-  BsTwitter,
-  BsFacebook,
-  BsFillShieldFill,
-} from "react-icons/bs";
+import { BsGithub, BsFillShieldFill } from "react-icons/bs";
 import Link from "next/link";
 import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
-
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useEffect } from "react";
@@ -34,6 +28,7 @@ const Login = () => {
     }
   }, [user]);
 
+  // login with credentials (email and password) using firebase auth
   const login = (e) => {
     e.preventDefault();
     signIn("credentials", {
@@ -43,6 +38,8 @@ const Login = () => {
     }).then((res) => {
       if (res.ok) {
         router.push("/dashboard");
+      } else {
+        console.log(res);
       }
     });
   };
@@ -56,7 +53,7 @@ const Login = () => {
       router.push("/dashboard");
     } catch (error) {
       console.log(error);
-      <h1 className="">Error while signIn</h1>;
+      setError("Failed to sign in");
     }
   };
 
@@ -69,7 +66,7 @@ const Login = () => {
       router.push("/dashboard");
     } catch (error) {
       console.log(error);
-      <h1 className="">Error while signIn</h1>;
+      setError("Failed to sign in");
     }
   };
 
@@ -85,7 +82,7 @@ const Login = () => {
         />
         <form className="flex flex-col items-center justify-center w-full mt-5">
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             className="w-full p-3 rounded-md border border-gray-300 outline-none"
             value={email}
@@ -109,18 +106,44 @@ const Login = () => {
             Login
           </button>
         </form>
-        <p className="mt-3">
+        <p className="mt-3 font-semibold">
           Not a member?{" "}
           <Link href="/register">
             <span className="text-blue-500 cursor-pointer">Register Now</span>
           </Link>
         </p>
         <p className="mt-3">Or continue with these social profile</p>
-        <div className="flex items-center justify-center gap-5 mt-3 cursor-pointer">
-          <FcGoogle onClick={GoogleLogin} className="w-6 h-6" />
-          <BsGithub onClick={GithubLogin} className="w-6 h-6" />
-          <BsTwitter className="w-6 h-6 text-blue-400" />
-          <BsFacebook className="w-6 h-6 text-blue-600" />
+        <div className="mt-5">
+          <button
+            type="button"
+            className="flex items-center justify-center w-full p-3 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 bg-opacity-10 hover:bg-opacity-20"
+            onClick={GoogleLogin}
+          >
+            <FcGoogle size={30} />
+            <span
+              className="ml-3 text-indigo-700 font-semibold"
+              disabled={loading}
+              to="/dashboard"
+            >
+              Continue With Google
+            </span>
+          </button>
+        </div>
+        <div className="mt-2">
+          <button
+            type="button"
+            className="flex items-center justify-center w-full p-3 border border-transparent text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 bg-opacity-10 hover:bg-opacity-20 focis:outline-none"
+            onClick={GithubLogin}
+          >
+            <BsGithub size={30} />
+            <span
+              className="ml-3 text-indigo-700 font-semibold"
+              disabled={loading}
+              to="/dashboard"
+            >
+              Continue With GitHub
+            </span>
+          </button>
         </div>
       </div>
     </div>

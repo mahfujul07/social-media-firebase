@@ -3,8 +3,13 @@ import { FcGallery } from "react-icons/fc";
 import { BiHappyAlt } from "react-icons/bi";
 import { BiVideoPlus } from "react-icons/bi";
 import Image from "next/image";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../utils/firebase";
 
 const ContentPost = () => {
+
+    const [user] = useAuthState(auth);
+
   return (
     <div>
       <div className="w-[94%] bg-white h-[20vh] m-auto mt-5 rounded-[10px]">
@@ -22,7 +27,7 @@ const ContentPost = () => {
             placeholder="Whats on your mind?"
           />
         </div>
-        <div >
+        <div>
           <div className="flex ml-[10px]">
             <FcGallery className="w-6 h-6 ml-5 mt-12" />
             <BiHappyAlt className="w-6 h-6 ml-5 mt-12" />

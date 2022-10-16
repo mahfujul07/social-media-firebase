@@ -15,6 +15,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             Mahfuz liked your post
@@ -24,6 +25,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -32,6 +34,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             khalid liked your post
@@ -41,6 +44,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -49,6 +53,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             sumon liked your post
@@ -58,6 +63,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -66,6 +72,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             suzan liked your post
@@ -75,6 +82,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -83,6 +91,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             rafiq liked your post
@@ -92,6 +101,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -100,6 +110,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             zulqar liked your post
@@ -109,6 +120,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -117,6 +129,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             emon liked your post
@@ -126,6 +139,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -134,6 +148,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             rimon liked your post
@@ -143,6 +158,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -151,6 +167,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             arif liked your post
@@ -160,6 +177,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -168,6 +186,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             asif liked your post
@@ -177,6 +196,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
         <div className="flex items-center mt-2 ml-3">
@@ -185,6 +205,7 @@ const LeftSidebar = () => {
             width={37}
             height={37}
             className="rounded-[50%] ml-[10px]"
+            alt="asif"
           />
           <p className="ml-[5px] mr-[15px] text-[#aaa] font-[13px] text-start w-[165px]">
             Mahfuz liked your post
@@ -194,6 +215,7 @@ const LeftSidebar = () => {
             width={30}
             height={30}
             className="rounded-[3px] ml-[43px]"
+            alt="asif"
           />
         </div>
       </div>
@@ -209,54 +231,63 @@ const LeftSidebar = () => {
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
           <Image
             src="/tower.jfif"
             width={86}
             height={150}
             className="object-cover rounded-[4px]"
+            alt="asif"
           />
         </div>
       </div>
